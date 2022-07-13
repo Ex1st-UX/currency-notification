@@ -1,0 +1,21 @@
+{
+    "name": "root/html",
+    "description": "dev",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Core\\General\\": "core/classes/interfaces",
+            "Core\\Currency\\": "core/classes/",
+            "Core\\": "core/classes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "exist"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "phpmailer/phpmailer": "^6.6"
+    }
+}
