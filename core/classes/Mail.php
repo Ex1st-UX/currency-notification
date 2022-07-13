@@ -9,7 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 class Mail
 {
     protected $PHPMailer;
-    protected $recepient = 'asamofalov63@gmail.com';
+    protected $recepient = 'recepient@gmail.com';
 
     function __construct()
     {
@@ -30,12 +30,12 @@ class Mail
         $this->PHPMailer->IsSMTP();
         $this->PHPMailer->Host       = 'smtp.yandex.ru';
         $this->PHPMailer->SMTPAuth   = true;
-        $this->PHPMailer->Username   = 'support@blackbeans.ru';
-        $this->PHPMailer->Password   = '16101970pop';
+        $this->PHPMailer->Username   = 'sender@mail.ru';
+        $this->PHPMailer->Password   = 'password';
         $this->PHPMailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $this->PHPMailer->Port       = 465;
 
         $this->PHPMailer->setFrom($this->PHPMailer->Username, 'Dev project');
-        $this->PHPMailer->addAddress($this->recepient, 'asamofalov');
+        $this->PHPMailer->addAddress($this->recepient, 'recepient');
     }
 }
